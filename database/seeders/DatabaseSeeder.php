@@ -29,5 +29,10 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        $this->call([
+        VitaGlyphUserSeeder::class,
+        AdminUserSeeder::class,
+    ]);
+
     }
 }

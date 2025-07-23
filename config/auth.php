@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+                'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin_users',
+        ],
+        'vitaglyph_user' => [
+            'driver' => 'session',
+            'provider' => 'vitaglyph_users',
+        ],
     ],
 
     /*
@@ -63,6 +71,16 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+
+                'admin_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\AdminUser::class,
+        ],
+
+        'vitaglyph_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\VitaGlyphUser::class,
         ],
 
         // 'users' => [
